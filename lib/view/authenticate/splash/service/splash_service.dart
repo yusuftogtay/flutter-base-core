@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
-import 'package:fluttermvvmtemplate/view/authenticate/splash/model/force_update_model.dart';
 import 'package:vexana/vexana.dart';
+
+import '../model/force_update_model.dart';
 
 abstract class ISplashService {
   final INetworkManager networkManager;
@@ -11,7 +11,7 @@ abstract class ISplashService {
       {required String version, required String platform});
 }
 
-enum SplashServiceQuery { VERSION, PLATFORM }
+enum SplashServiceQuery { VERSION, PLATFORM } 
 
 extension SplashServiceQueryExtension on SplashServiceQuery {
   MapEntry<String, String> toMapValue(String value) {
@@ -25,7 +25,7 @@ extension SplashServiceQueryExtension on SplashServiceQuery {
 }
 
 class SplashService extends ISplashService {
-  final String _path = 'version';
+  final String _path = 'settings';
   SplashService(INetworkManager networkManager) : super(networkManager);
 
   @override
