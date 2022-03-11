@@ -5,13 +5,11 @@ part 'force_update_model.g.dart';
 
 @JsonSerializable()
 class ForceUpdateModel extends INetworkModel<ForceUpdateModel> {
-  bool? isForceUpdate;
-  String? type;
-  String? currentVersion;
+  String? appVersion;
+  bool? forceUpdate;
   ForceUpdateModel({
-    this.isForceUpdate,
-    this.type,
-    this.currentVersion,
+    this.appVersion,
+    this.forceUpdate,
   });
 
   @override
@@ -23,4 +21,11 @@ class ForceUpdateModel extends INetworkModel<ForceUpdateModel> {
   Map<String, dynamic> toJson() {
     return _$ForceUpdateModelToJson(this);
   }
+}
+
+class Data {
+  String? appVersion;
+  Data({
+    this.appVersion,
+  });
 }
