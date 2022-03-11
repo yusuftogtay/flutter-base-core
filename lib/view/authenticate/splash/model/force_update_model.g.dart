@@ -8,15 +8,13 @@ part of 'force_update_model.dart';
 
 ForceUpdateModel _$ForceUpdateModelFromJson(Map<String, dynamic> json) {
   return ForceUpdateModel(
-    isForceUpdate: json['isForceUpdate'] as bool?,
-    type: json['type'] as String?,
-    currentVersion: json['currentVersion'] as String?,
+    appVersion: json['appVersion'] as String?,
+    forceUpdate: json['forceUpdate'] as bool?,
   );
 }
 
 Map<String, dynamic> _$ForceUpdateModelToJson(ForceUpdateModel instance) =>
     <String, dynamic>{
-      'isForceUpdate': instance.isForceUpdate,
-      'type': instance.type,
-      'currentVersion': instance.currentVersion,
+      'appVersion': instance.appVersion,
+      'forceUpdate': instance.forceUpdate,
     };
