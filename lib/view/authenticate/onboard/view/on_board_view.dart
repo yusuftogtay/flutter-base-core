@@ -1,9 +1,9 @@
+import 'package:architecture_widgets/src/text/auto_locale_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/base/view/base_widget.dart';
-import 'package:architecture_widgets/src/text/auto_locale_text.dart';
 import '../../../../core/extension/context_extension.dart';
 import '../../../_product/_widgets/avatar/on_board_circle.dart';
 import '../model/on_board_model.dart';

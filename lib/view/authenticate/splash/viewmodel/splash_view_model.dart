@@ -2,13 +2,10 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttermvvmtemplate/core/constants/navigation/navigation_constants.dart';
 import 'package:kartal/kartal.dart';
-import 'package:logger/logger.dart';
 import 'package:mobx/mobx.dart';
 
 import '../../../../core/base/model/base_view_model.dart';
-import '../../../../core/init/cache/locale_manager.dart';
 import '../../../../product/enum/platform_project.dart';
 import '../model/force_update_model.dart';
 import '../service/splash_service.dart';
@@ -36,7 +33,7 @@ abstract class _SplashViewModelBase with Store, BaseViewModel, DeviceAndCache {
 
     // Dummy for moduler page
     Future.delayed(Duration(seconds: 1)).then((value) {
-      navigation.navigateToPage(path: NavigationConstants.BUY_VIEW);
+      //navigation.navigateToPage(path: NavigationConstants.BUY_VIEW);
     });
   }
 
@@ -65,7 +62,7 @@ abstract class _SplashViewModelBase with Store, BaseViewModel, DeviceAndCache {
         version: ''.version, platform: '${PlatformProject.IOS.versionNumber}');
 
     if (response is ForceUpdateModel) {
-      return response.isForceUpdate ?? false;
+      return response.forceUpdate ?? false;
     } else {
       return false;
     }
@@ -85,10 +82,10 @@ abstract class _SplashViewModelBase with Store, BaseViewModel, DeviceAndCache {
 
 class _UserVersionCreate {
   static String createNumber(int number) {
-    var model = ForceUpdateModel(currentVersion: '1.0.3');
+    var model = ForceUpdateModel(appVersion: '1.0.3');
     final data = jsonEncode(model);
     final lastData = jsonDecode(data);
 
-    return ForceUpdateModel().fromJson(lastData).currentVersion ?? '';
+    return ForceUpdateModel().fromJson(lastData).appVersion ?? '';
   }
 }
