@@ -1,7 +1,6 @@
 import 'package:architecture_widgets/src/card/not_found_navigation_widget.dart';
 import 'package:flutter/material.dart';
 
-import '../../../view/authenticate/onboard/view/on_board_view.dart';
 import '../../../view/authenticate/splash/view/splash_view.dart';
 import '../../../view/authenticate/test/view/test_view.dart';
 import '../../constants/navigation/navigation_constants.dart';
@@ -19,9 +18,6 @@ class NavigationRoute {
 
       case NavigationConstants.TEST_VIEW:
         return normalNavigate(TestsView(), NavigationConstants.TEST_VIEW);
-
-      case NavigationConstants.ON_BOARD:
-        return normalNavigate(OnBoardView(), NavigationConstants.ON_BOARD);
 
       default:
         return MaterialPageRoute(
