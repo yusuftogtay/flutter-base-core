@@ -1,6 +1,6 @@
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttermvvmtemplate/core/constants/app/app_constants.dart';
+import '../../constants/app/app_constants.dart';
 
 class AnalytcisManager {
   static final AnalytcisManager _instance = AnalytcisManager._init();
