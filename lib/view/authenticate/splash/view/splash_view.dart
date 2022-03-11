@@ -1,11 +1,11 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:fluttermvvmtemplate/core/init/lang/locale_keys.g.dart';
 import 'package:kartal/kartal.dart';
 
 import '../../../../core/base/view/base_widget.dart';
 import '../../../../core/constants/image/image_constatns.dart';
+import '../../../../core/init/lang/locale_keys.g.dart';
 import '../viewmodel/splash_view_model.dart';
 
 class SplashView extends StatelessWidget {
@@ -26,7 +26,8 @@ class SplashView extends StatelessWidget {
 
   Widget buildScaffoldBody(BuildContext context, SplashViewModel viewModel) {
     return Scaffold(
-      backgroundColor: context.colorScheme.onSurface,
+      //backgroundColor: context.colorScheme.onSurface,
+      backgroundColor: Color(0x00000000),
       body: SafeArea(
           child: Stack(
         children: [
