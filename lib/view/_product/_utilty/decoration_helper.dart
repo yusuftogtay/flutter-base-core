@@ -1,6 +1,6 @@
+import 'package:architecture_widgets/src/decoration/circle_decoration.dart';
 import 'package:flutter/material.dart';
 
-import 'package:architecture_widgets/src/decoration/circle_decoration.dart';
 import '../../../core/extension/context_extension.dart';
 
 class DecorationHelper {
